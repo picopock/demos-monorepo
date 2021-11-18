@@ -1,0 +1,20 @@
+{
+  "name": "@demo/cli",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Azrael",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "azrael": "./bin/azrael.js"
+  },
+  "dependencies": {
+    "chalk-pipe": "^5.1.1",
+    "commander": "^2.20.0",
+    "execa": "^2.0.3",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^6.5.0",
+    "listr": "^0.14.3",
+    "rxjs": "^6.5.2"
+  }
+}
