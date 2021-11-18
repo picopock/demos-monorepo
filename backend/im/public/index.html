@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    Hello, Koa and Socket.io
+    <img src="/images/socket.io.client.event.png" alt="socket.io.client.event" />
+    <script type="text/javascript" src="/js/socket.io.js"></script>
+    <script>
+      const nsp = '/abc'
+      const client = io(nsp, {
+        path: '/ws/test',
+        transports: ['websocket'],
+        reconnectionAttempts: 10, // 重连次数
+        reconnection: true, // 是否重连
+        reconnectionDelay: 1000, // 重连延迟
+        reconnectionDelayMax: 5000, // 延迟最大值
+        timeout: 2000, // 超时时间
+        autoConnect: true // 自动连接，如需连接，调用manager.open
+      })
+      client.on('error', err => {
+        console.error(err)
+      })
+      client.on('connect', () => {
+        console.log('connect')
+      })
+      client.on('disconnect', err => {
+        console.error('disconnect: ', err)
+      })
+      client.on('reconnect', count => {
+        console.log('reconnect: ', count)
+      })
+      client.on('reconnect_attempt', count => {
+        console.log('reconnect_attempt: ', count)
+      })
+      client.on('reconnecting', count => {
+        console.log('reconnecting: ', count)
+      })
+      client.on('reconnect_error', err => {
+        console.error('reconnect_error: ', err)
+      })
+      client.on('reconnect_failed', () => {
+        console.error('reconnect_failed')
+      })
+    </script>
+  </body>
+</html>

@@ -363,6 +363,26 @@
     {
       "packageName": "@demo/cli",
       "projectFolder": "backend/cli"
+    },
+    {
+      "packageName": "@demo/webim",
+      "projectFolder": "backend/im"
+    },
+    {
+      "packageName": "@demo/koa2-templete",
+      "projectFolder": "backend/koa2_templete"
+    },
+    {
+      "packageName": "@demo/react-feature",
+      "projectFolder": "frontend/react_feature"
+    },
+    {
+      "packageName": "@demo/svelte",
+      "projectFolder": "frontend/svelte"
+    },
+    {
+      "packageName": "@demo/vue3",
+      "projectFolder": "frontend/vue3"
     }
     // {
     //   /**
@@ -419,18 +439,6 @@
     //    * NOTE: "versionPolicyName" and "shouldPublish" are alternatives; you cannot specify them both.
     //    */
     //   // "versionPolicyName": ""
-    // },
-    // 
-    // {
-    //   "packageName": "my-controls",
-    //   "projectFolder": "libraries/my-controls",
-    //   "reviewCategory": "production"
-    // },
-    // 
-    // {
-    //   "packageName": "my-toolchain",
-    //   "projectFolder": "tools/my-toolchain",
-    //   "reviewCategory": "tools"
     // }
   ]
 }

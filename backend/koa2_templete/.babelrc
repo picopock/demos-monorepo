@@ -1,0 +1,11 @@
+{
+    "env": {
+        "test": {
+            "presets": ["es2015-node5"],
+            "plugins": [
+                "tranform-async-to-generator",
+                "syntax-async-functions"
+            ]
+        }
+    }
+}
