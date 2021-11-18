@@ -1,0 +1,526 @@
+// DO NOT ADD COMMENTS IN THIS FILE.  They will be lost when the Rush tool resaves it.
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
+  "packages": [
+    {
+      "name": "@babel/core",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@koa/cors",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@pmmmwh/react-refresh-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@rollup/plugin-node-resolve",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@svgr/webpack",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@testing-library/jest-dom",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@testing-library/react",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@testing-library/user-event",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/cli-plugin-babel",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/cli-plugin-e2e-cypress",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/cli-plugin-eslint",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/cli-plugin-pwa",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/cli-plugin-router",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/cli-plugin-typescript",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/cli-plugin-unit-mocha",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/cli-plugin-vuex",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/cli-service",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/compiler-sfc",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/eslint-config-prettier",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/eslint-config-typescript",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vue/test-utils",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "antd",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "babel-core",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "babel-eslint",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "babel-jest",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "babel-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "babel-plugin-import",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "babel-plugin-named-asset-import",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "babel-preset-es2015-node5",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "babel-preset-react-app",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "bfj",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "camelcase",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "case-sensitive-paths-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "chai",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "chalk-pipe",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "commander",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "core-js",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "css-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "css-minimizer-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "debug",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "dotenv",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "dotenv-expand",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-config-react-app",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-plugin-flowtype",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-plugin-import",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-plugin-jsx-a11y",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-plugin-prettier",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-plugin-react",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-plugin-react-hooks",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-plugin-vue",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "eslint-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "execa",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "file-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "fs-extra",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "html-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "identity-obj-proxy",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "inquirer",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "jest",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "jest-environment-jsdom-fourteen",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "jest-resolve",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "jest-watch-typeahead",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "jsonwebtoken",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "kcors",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "koa",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "koa-bodyparser",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "koa-convert",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "koa-json",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "koa-jwt",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "koa-onerror",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "koa-router",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "koa-static",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "less",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "less-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "listr",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "log4js",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "mini-css-extract-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "mocha",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "node-sass",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "nodemon",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "pnp-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "postcss",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "postcss-flexbugs-fixes",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "postcss-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "postcss-normalize",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "postcss-preset-env",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "prettier",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "react",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "react-app-polyfill",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "react-dev-utils",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "react-dom",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "react-refresh",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "react-router-dom",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "recoil",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "register-service-worker",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "resolve",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "resolve-url-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "rollup",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "rollup-plugin-css-only",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "rollup-plugin-livereload",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "rollup-plugin-svelte",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "rollup-plugin-terser",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "rxjs",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "sass",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "sass-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "semver",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "sirv-cli",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "socket.io",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "style-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "supertest",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "svelte",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "terser-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "ts-pnp",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "type-fest",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "typescript",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "url-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "util",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "vue",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "vue-class-component",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "vue-router",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "vuex",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "web-vitals",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "webpack",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "webpack-dev-server",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "webpack-manifest-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "workbox-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    }
+  ]
+}
