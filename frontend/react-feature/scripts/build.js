@@ -16,17 +16,17 @@ require('../config/env');
 
 
 const path = require('path');
-const chalk = require('../lib/react-dev-utils/chalk');
+const chalk = require('@demo/react-dev-utils/chalk');
 const fs = require('fs-extra');
 const bfj = require('bfj');
 const webpack = require('webpack');
 const configFactory = require('../config/webpack.config');
 const paths = require('../config/paths');
-const checkRequiredFiles = require('../lib/react-dev-utils/checkRequiredFiles');
-const formatWebpackMessages = require('../lib/../lib/react-dev-utils/formatWebpackMessages');
-const printHostingInstructions = require('../lib/react-dev-utils/printHostingInstructions');
-const FileSizeReporter = require('../lib/react-dev-utils/FileSizeReporter');
-const printBuildError = require('../lib/react-dev-utils/printBuildError');
+const checkRequiredFiles = require('@demo/react-dev-utils/checkRequiredFiles');
+const formatWebpackMessages = require('@demo/@demo/react-dev-utils/formatWebpackMessages');
+const printHostingInstructions = require('@demo/react-dev-utils/printHostingInstructions');
+const FileSizeReporter = require('@demo/react-dev-utils/FileSizeReporter');
+const printBuildError = require('@demo/react-dev-utils/printBuildError');
 
 const measureFileSizesBeforeBuild =
   FileSizeReporter.measureFileSizesBeforeBuild;
@@ -52,7 +52,7 @@ const config = configFactory('production');
 
 // We require that you explicitly set browsers and do not fall back to
 // browserslist defaults.
-const { checkBrowsers } = require('../lib/react-dev-utils/browsersHelper');
+const { checkBrowsers } = require('@demo/react-dev-utils/browsersHelper');
 checkBrowsers(paths.appPath, isInteractive)
   .then(() => {
     // First, read the current file sizes in build directory.
@@ -75,13 +75,13 @@ checkBrowsers(paths.appPath, isInteractive)
         console.log(warnings.join('\n\n'));
         console.log(
           '\nSearch for the ' +
-            chalk.underline(chalk.yellow('keywords')) +
-            ' to learn more about each warning.'
+          chalk.underline(chalk.yellow('keywords')) +
+          ' to learn more about each warning.'
         );
         console.log(
           'To ignore, add ' +
-            chalk.cyan('// eslint-disable-next-line') +
-            ' to the line before.\n'
+          chalk.cyan('// eslint-disable-next-line') +
+          ' to the line before.\n'
         );
       } else {
         console.log(chalk.green('Compiled successfully.\n'));
@@ -180,7 +180,7 @@ function build(previousFileSizes) {
         console.log(
           chalk.yellow(
             '\nTreating warnings as errors because process.env.CI = true.\n' +
-              'Most CI servers set it automatically.\n'
+            'Most CI servers set it automatically.\n'
           )
         );
         return reject(new Error(messages.warnings.join('\n\n')));

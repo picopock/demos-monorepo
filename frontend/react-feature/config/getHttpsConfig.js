@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-const chalk = require('../lib/react-dev-utils/chalk');
+const chalk = require('@demo/react-dev-utils/chalk');
 const paths = require('./paths');
 
 // Ensure the certificate and key provided are valid and if not
@@ -24,8 +24,7 @@ function validateKeyAndCerts({ cert, key, keyFile, crtFile }) {
     crypto.privateDecrypt(key, encrypted);
   } catch (err) {
     throw new Error(
-      `The certificate key "${chalk.yellow(keyFile)}" is invalid.\n${
-        err.message
+      `The certificate key "${chalk.yellow(keyFile)}" is invalid.\n${err.message
       }`
     );
   }

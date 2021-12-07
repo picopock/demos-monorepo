@@ -3,7 +3,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
+      "name": "@babel/code-frame",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "@babel/core",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@demo/react-dev-utils",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -99,6 +107,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "address",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "antd",
       "allowedCategories": [ "internal" ]
     },
@@ -139,6 +151,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "browserslist",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "camelcase",
       "allowedCategories": [ "internal" ]
     },
@@ -148,6 +164,10 @@
     },
     {
       "name": "chai",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "chalk",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -163,6 +183,14 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "cross-env",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "cross-spawn",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "css-loader",
       "allowedCategories": [ "internal" ]
     },
@@ -175,11 +203,19 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "detect-port-alt",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "dotenv",
       "allowedCategories": [ "internal" ]
     },
     {
       "name": "dotenv-expand",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "escape-string-regexp",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -235,7 +271,31 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "filesize",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "find-up",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "fork-ts-checker-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "fs-extra",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "global-modules",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "globby",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "gzip-size",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -247,7 +307,15 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "immer",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "inquirer",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "is-root",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -319,6 +387,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "loader-utils",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "log4js",
       "allowedCategories": [ "internal" ]
     },
@@ -336,6 +408,14 @@
     },
     {
       "name": "nodemon",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "open",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "pkg-up",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -383,6 +463,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "react-error-overlay",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "react-refresh",
       "allowedCategories": [ "internal" ]
     },
@@ -392,6 +476,10 @@
     },
     {
       "name": "recoil",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "recursive-readdir",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -443,11 +531,19 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "shell-quote",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "sirv-cli",
       "allowedCategories": [ "internal" ]
     },
     {
       "name": "socket.io",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "strip-ansi",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -464,6 +560,10 @@
     },
     {
       "name": "terser-webpack-plugin",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "text-table",
       "allowedCategories": [ "internal" ]
     },
     {
