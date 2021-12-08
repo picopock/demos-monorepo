@@ -55,6 +55,14 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "@vitejs/plugin-vue",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@vitejs/plugin-vue-jsx",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "@vue/cli-plugin-babel",
       "allowedCategories": [ "internal" ]
     },
@@ -587,6 +595,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "vite",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "vue",
       "allowedCategories": [ "internal" ]
     },
@@ -596,6 +608,10 @@
     },
     {
       "name": "vue-router",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "vue-tsc",
       "allowedCategories": [ "internal" ]
     },
     {
