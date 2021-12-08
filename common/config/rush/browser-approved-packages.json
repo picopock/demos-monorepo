@@ -15,7 +15,47 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "@egg/egg",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "@koa/cors",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@midwayjs/bootstrap",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@midwayjs/cli",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@midwayjs/core",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@midwayjs/decorator",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@midwayjs/egg-ts-helper",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@midwayjs/luckyeye",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@midwayjs/mock",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@midwayjs/socketio",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "@midwayjs/web",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -115,12 +155,36 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "accepts",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "address",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
+    },
+    {
+      "name": "agentkeepalive",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "antd",
       "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "assert-extends",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "assert-file",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "autod",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "autod-egg",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "babel-core",
@@ -163,6 +227,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "cache-content-type",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "camelcase",
       "allowedCategories": [ "internal" ]
     },
@@ -183,8 +251,24 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "circular-json-for-egg",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "cluster-client",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "coffee",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "commander",
       "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "cookie",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "core-js",
@@ -208,7 +292,11 @@
     },
     {
       "name": "debug",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
+    },
+    {
+      "name": "delegates",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "detect-port-alt",
@@ -223,12 +311,120 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "egg",
+      "allowedCategories": [ "egg", "internal" ]
+    },
+    {
+      "name": "egg-alinode",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-bin",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-ci",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-cluster",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-cookies",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-core",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-development",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-doctools",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-errors",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-i18n",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-jsonp",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-logger",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-logrotator",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-mock",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-multipart",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-onerror",
+      "allowedCategories": [ "egg", "internal" ]
+    },
+    {
+      "name": "egg-plugin-puml",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-schedule",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-security",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-session",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-static",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-tracer",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-view",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-view-nunjucks",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-watcher",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "escape-string-regexp",
       "allowedCategories": [ "internal" ]
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
+    },
+    {
+      "name": "eslint-config-egg",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "eslint-config-react-app",
@@ -275,6 +471,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "extend2",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "file-loader",
       "allowedCategories": [ "internal" ]
     },
@@ -287,12 +487,24 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "findlinks",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "fork-ts-checker-webpack-plugin",
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "formstream",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "fs-extra",
       "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "glob",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "global-modules",
@@ -303,12 +515,20 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "graceful",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "gzip-size",
       "allowedCategories": [ "internal" ]
     },
     {
       "name": "html-webpack-plugin",
       "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "humanize-ms",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "identity-obj-proxy",
@@ -325,6 +545,10 @@
     {
       "name": "is-root",
       "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "is-type-of",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "jest",
@@ -352,15 +576,19 @@
     },
     {
       "name": "koa",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "koa-bodyparser",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "koa-convert",
       "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "koa-is-json",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "koa-json",
@@ -372,7 +600,11 @@
     },
     {
       "name": "koa-onerror",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
+    },
+    {
+      "name": "koa-override",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "koa-router",
@@ -380,7 +612,7 @@
     },
     {
       "name": "koa-static",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "less",
@@ -411,6 +643,26 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "ms",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "mustache",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "mwts",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "mz",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "mz-modules",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "node-sass",
       "allowedCategories": [ "internal" ]
     },
@@ -419,8 +671,16 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "on-finished",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "open",
       "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "pedding",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "pkg-up",
@@ -503,6 +763,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "rimraf",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "rollup",
       "allowedCategories": [ "internal" ]
     },
@@ -523,6 +787,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "runscript",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "rxjs",
       "allowedCategories": [ "internal" ]
     },
@@ -536,7 +804,11 @@
     },
     {
       "name": "semver",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
+    },
+    {
+      "name": "sendmessage",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "shell-quote",
@@ -551,6 +823,18 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "socket.io-client",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "spy",
+      "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "stack-trace",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "strip-ansi",
       "allowedCategories": [ "internal" ]
     },
@@ -560,7 +844,7 @@
     },
     {
       "name": "supertest",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "svelte",
@@ -575,6 +859,14 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "ts-jest",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "ts-node",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "ts-pnp",
       "allowedCategories": [ "internal" ]
     },
@@ -584,15 +876,23 @@
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "internal" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "url-loader",
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "urllib",
+      "allowedCategories": [ "egg" ]
+    },
+    {
       "name": "util",
       "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "utility",
+      "allowedCategories": [ "egg" ]
     },
     {
       "name": "vite",
@@ -637,6 +937,10 @@
     {
       "name": "workbox-webpack-plugin",
       "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "ylru",
+      "allowedCategories": [ "egg" ]
     }
   ]
 }

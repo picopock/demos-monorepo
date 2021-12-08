@@ -82,7 +82,8 @@
   "projectFolderMaxDepth": 2,
   "approvedPackagesPolicy": {
     "reviewCategories": [
-      "internal"
+      "internal",
+      "egg"
     ],
     "ignoredNpmScopes": [
       "@types"
@@ -108,6 +109,11 @@
   },
   "variants": [],
   "projects": [
+    {
+      "packageName": "@demo/midway",
+      "projectFolder": "backend/midway",
+      "reviewCategory": "internal"
+    },
     {
       "packageName": "@demo/cli",
       "projectFolder": "backend/cli",
@@ -142,6 +148,16 @@
       "packageName": "@demo/vue3",
       "projectFolder": "frontend/vue3",
       "reviewCategory": "internal"
+    },
+    {
+      "packageName": "egg",
+      "projectFolder": "egg/egg",
+      "reviewCategory": "egg"
+    },
+    {
+      "packageName": "egg-onerror",
+      "projectFolder": "egg/egg-onerror",
+      "reviewCategory": "egg"
     }
   ]
 }
