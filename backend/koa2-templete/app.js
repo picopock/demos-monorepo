@@ -1,11 +1,13 @@
 const Koa = require('koa');
 const app = new Koa();
+const path = require('path');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
 const json = require('koa-json');
 const static = require('koa-static');
 const jwt = require('koa-jwt');
 const cors = require('kcors');
+const Pug = require('koa-pug');
 const logUtil = require('./utils/log_util');
 const jwtConfig = require('./config/jwt_config');
 const router = require('./routers/route');
@@ -29,11 +31,19 @@ app.use(cors({
 }))
 
 // jwt
-app.use(jwt({secret: jwtConfig.secret}).unless({
-	path: [/^(?!\/api).*/,/^\/api\/login/, /^\/api\/register/]		// 数据中的路径不需要要通过jwt验证
+app.use(jwt({ secret: jwtConfig.secret }).unless({
+	path: [/^(?!\/api).*/, /^\/api\/login/, /^\/api\/register/]		// 数据中的路径不需要要通过jwt验证
 }));
 
 app.use(static(__dirname + '/public'));
+
+const pug = new Pug({
+	viewPath: path.resolve(__dirname, './views'),
+	locals: { /* variables and helpers */ },
+	basedir: path.resolve(__dirname, './views'),
+	helperPath: [],
+	app: app // Binding `ctx.render()`, equals to pug.use(app)
+})
 
 // logger
 app.use(async (ctx, next) => {
@@ -58,9 +68,9 @@ app.use(async (ctx, next) => {
 app.use(router.routes())
 	.use(router.allowedMethods());
 
-// 404 重定向到/
+// 404 重定向到 /
 app.use(async (ctx, next) => {
-	if(ctx.status === 404) {
+	if (ctx.status === 404) {
 		ctx.redirect('/');
 	}
 	next();

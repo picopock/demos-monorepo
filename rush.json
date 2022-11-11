@@ -76,7 +76,7 @@
      */
     // "useWorkspaces": true
   },
-  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0",
+  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || > 15.0.0",
   "ensureConsistentVersions": true,
   "projectFolderMinDepth": 2,
   "projectFolderMaxDepth": 2,
@@ -109,6 +109,11 @@
   },
   "variants": [],
   "projects": [
+    {
+      "packageName": "@demo/egg",
+      "projectFolder": "backend/egg",
+      "reviewCategory": "internal"
+    },
     {
       "packageName": "@demo/midway",
       "projectFolder": "backend/midway",

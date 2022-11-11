@@ -180,11 +180,11 @@
     },
     {
       "name": "autod",
-      "allowedCategories": [ "egg" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "autod-egg",
-      "allowedCategories": [ "egg" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "babel-core",
@@ -320,11 +320,11 @@
     },
     {
       "name": "egg-bin",
-      "allowedCategories": [ "egg" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "egg-ci",
-      "allowedCategories": [ "egg" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "egg-cluster",
@@ -368,7 +368,7 @@
     },
     {
       "name": "egg-mock",
-      "allowedCategories": [ "egg" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "egg-multipart",
@@ -385,6 +385,10 @@
     {
       "name": "egg-schedule",
       "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "egg-scripts",
+      "allowedCategories": [ "internal" ]
     },
     {
       "name": "egg-security",
@@ -424,7 +428,7 @@
     },
     {
       "name": "eslint-config-egg",
-      "allowedCategories": [ "egg" ]
+      "allowedCategories": [ "egg", "internal" ]
     },
     {
       "name": "eslint-config-react-app",
@@ -661,6 +665,10 @@
     {
       "name": "mz-modules",
       "allowedCategories": [ "egg" ]
+    },
+    {
+      "name": "node-fetch",
+      "allowedCategories": [ "internal" ]
     },
     {
       "name": "node-sass",
