@@ -1,19 +1,19 @@
 <script>
-  let todoList = []
+  let todoList = [];
 
   const onIncrement = () => {
     const todo = {
-      name: 'todo' + (todoList.length + 1),
-      qty: Math.random(),
-    }
+      name: "todo" + (todoList.length + 1),
+      qty: Math.random()
+    };
     // 		todoList.push(todo)
-    todoList = todoList.concat(todo)
-  }
+    todoList = todoList.concat(todo);
+  };
 
   const onDecrement = () => {
     // 		todoList.pop()
-    todoList = todoList.slice(0, -1)
-  }
+    todoList = todoList.slice(0, -1);
+  };
 </script>
 
 <h1>Todo List</h1>

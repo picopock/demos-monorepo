@@ -1,4 +1,4 @@
-import React, {
+import {
   useEffect,
   useRef,
   useMemo,
@@ -22,11 +22,11 @@ import { ThemeContext } from '../ThemeContext'
 
 const initialCount = 0
 
-function init(initialCount) {
+function init(initialCount: number) {
   return { count: initialCount }
 }
 
-function reducer(state, action) {
+function reducer(state: {count: number}, action: {type: string, payload?: any}) {
   switch (action.type) {
     case 'increment':
       return { count: state.count + 1 }
@@ -37,7 +37,7 @@ function reducer(state, action) {
   }
 }
 
-const options = [];
+const options: any[] = [];
 for (let i = 0; i < 100000; i++) {
   const value = `${i.toString(36)}${i}`;
   options.push({
@@ -46,7 +46,7 @@ for (let i = 0; i < 100000; i++) {
   });
 }
 
-const Test = (props) => {
+const Test = (props: any) => {
   const { dataSource = [], vip = [], children } = props
   const [testData, setTestData] = useState([2, 32, 1, 534, 44])
   const [count, setCount] = useState(0);
@@ -80,7 +80,7 @@ const Test = (props) => {
         title: 'clientID',
         dataIndex: 'clientId',
         key: 'clientId',
-        render(clientId, row) {
+        render(clientId: string, row: any) {
           return vip.includes(clientId) ? 'vip 用户' : '普通用户'
         }
       },
@@ -118,7 +118,7 @@ const Test = (props) => {
     setCount(count + 1);
   }, [count]);
 
-  const inputRef = useRef(null)
+  const inputRef = useRef<any>(null)
 
   // const [state, dispatch] = useReducer(reducer, initialState)
   const [state, dispatch] = useReducer(reducer, initialCount, init)
@@ -138,8 +138,8 @@ const Test = (props) => {
       options={options}
     />
     <button onClick={() => {
-      inputRef.current.alert(Object.keys(inputRef.current).join(' '))
-      inputRef.current.focus()
+      inputRef.current?.alert(Object.keys(inputRef.current).join(' '))
+      inputRef.current?.focus()
     }}>focus</button>
     <div onClick={() => {
       dispatch({
@@ -171,7 +171,7 @@ const Test = (props) => {
       increaseCount()
     }}></ThemedButton>
     <br />
-    <FancyInput ref={inputRef}></FancyInput>
+    <FancyInput ref={inputRef} />
     {children()}
     <Table dataSource={dataSource} columns={column.current}></Table>
   </div>
@@ -181,12 +181,11 @@ export default Test
 
 
 
-export function ThemedButton(props, ref) {
+export function ThemedButton(props: any, ref: any) {
   const { text, onClick = () => { }, noRef } = props
   const theme = useContext(ThemeContext);
   let _props = {
-
-  }
+  } as any;
   if (!noRef) {
     _props.ref = ref
   }
@@ -197,32 +196,30 @@ export function ThemedButton(props, ref) {
 }
 
 
-function FancyInput(props, ref) {
-  const inputRef = useRef(null);
+export const FancyInput = forwardRef((props: any, ref: any) => {
+  const inputRef = useRef<any>(null);
   useImperativeHandle(ref, () => ({
     focus: () => {
       inputRef.current.focus();
     },
-    alert: (content) => {
+    alert: (content: any) => {
       alert(content)
     },
     abc: '123'
   }))
 
   return <input type="text" ref={inputRef} />
-}
+})
 
-// eslint-disable-next-line
-FancyInput = forwardRef(FancyInput)
 
 export const ThemesBth = forwardRef(ThemedButton)
 
 
 
-function useFriendStatus(friendID) {
-  const [isOnline, setIsOnline] = useState(null);
+function useFriendStatus(friendID: number) {
+  const [isOnline, setIsOnline] = useState<boolean>(false);
   // 在开发者工具中的这个 Hook 旁边显示标签
   // e.g. "FriendStatus: Online"
   useDebugValue(isOnline ? 'Online' : 'Offline');
-  return [isOnline, setIsOnline];
+  return [isOnline, setIsOnline] as const;
 }

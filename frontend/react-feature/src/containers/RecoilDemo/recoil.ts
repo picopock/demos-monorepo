@@ -34,13 +34,13 @@ export const filteredTodoListState = selector({
   key: 'filteredTodoListState',
   get: ({ get }) => {
     const filterStatus = get(todoListFilterStatus);
-    const list = get(todoListState)
+    const list: any = get(todoListState)
 
     switch (filterStatus) {
       case FilterStatus.ShowCompleted:
-        return list.filter(item => item.isComplete)
+        return list.filter((item: any) => item.isComplete)
       case FilterStatus.ShowUnCompleted:
-        return list.filter(item => !item.isComplete)
+        return list.filter((item: any) => !item.isComplete)
       default:
         return list
     }
@@ -52,7 +52,7 @@ export const todoListStatsState = selector({
   get: ({ get }) => {
     const todoList = get(todoListState);
     const { length: totalNum } = todoList;
-    const { length: totalCompletedNum } = todoList.filter(item => item.isComplete)
+    const { length: totalCompletedNum } = todoList.filter((item: any) => item.isComplete)
     const totalUnCompletedNum = totalNum - totalCompletedNum
     const percentCompleted = totalNum === 0 ? 0 : totalCompletedNum / totalNum;
 

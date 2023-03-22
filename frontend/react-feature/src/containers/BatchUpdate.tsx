@@ -1,8 +1,12 @@
-import React from 'react';
-import { unstable_batchedUpdates } from 'react-dom';
+import { PureComponent } from 'react';
 
-export default class BatchUpdateDemo extends React.PureComponent {
-  constructor(props) {
+export interface IBatchUpdateDemoProps {
+
+}
+
+export default class BatchUpdateDemo extends PureComponent<IBatchUpdateDemoProps> {
+  renderCount: number;
+  constructor(props: IBatchUpdateDemoProps) {
     super(props);
     // 记录 render 的执行次数
     this.renderCount = 0;
@@ -23,11 +27,10 @@ export default class BatchUpdateDemo extends React.PureComponent {
 
   fn3 = () => {
     // 模拟一个异步操作，真实业务里面可能是网络请求等
-    setTimeout(
-      unstable_batchedUpdates(() => {
+    setTimeout(() => {
         this.setState({ a: Math.random() });
         this.setState({ a: Math.random() });
-      }),
+      },
       0
     );
   };

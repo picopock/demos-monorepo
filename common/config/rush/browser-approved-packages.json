@@ -611,6 +611,10 @@
       "allowedCategories": [ "egg" ]
     },
     {
+      "name": "koa-pug",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "koa-router",
       "allowedCategories": [ "internal" ]
     },
@@ -720,6 +724,10 @@
     },
     {
       "name": "prettier",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "prompts",
       "allowedCategories": [ "internal" ]
     },
     {
@@ -835,6 +843,10 @@
       "allowedCategories": [ "internal" ]
     },
     {
+      "name": "source-map-loader",
+      "allowedCategories": [ "internal" ]
+    },
+    {
       "name": "spy",
       "allowedCategories": [ "egg" ]
     },
@@ -856,6 +868,10 @@
     },
     {
       "name": "svelte",
+      "allowedCategories": [ "internal" ]
+    },
+    {
+      "name": "tailwindcss",
       "allowedCategories": [ "internal" ]
     },
     {

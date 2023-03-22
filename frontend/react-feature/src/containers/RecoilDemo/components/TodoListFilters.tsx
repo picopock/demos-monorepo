@@ -1,4 +1,4 @@
-import React, { useCallback, memo } from 'react'
+import { useCallback, memo } from 'react'
 import { useRecoilState } from 'recoil'
 import { Select } from 'antd'
 import { todoListFilterStatus, FilterStatus } from '../recoil'
@@ -6,7 +6,7 @@ import { todoListFilterStatus, FilterStatus } from '../recoil'
 function TodoListFilters() {
   const [filterStatus, setFilterStatus] = useRecoilState(todoListFilterStatus)
 
-  const updateFilterStatus = useCallback((value) => {
+  const updateFilterStatus = useCallback((value: string) => {
     setFilterStatus(value)
   }, [setFilterStatus])
 

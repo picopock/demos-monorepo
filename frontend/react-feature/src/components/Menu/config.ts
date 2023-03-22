@@ -1,4 +1,3 @@
-
 export const navs = [
   {
     path: '/',
@@ -24,4 +23,4 @@ export const navs = [
     path: '/recoil',
     title: 'State Manager: Recoil'
   },
-].map((nav, index) => ({...nav, key: index.toString() }))
+].map((nav, index) => ({ ...nav, key: index.toString() }))

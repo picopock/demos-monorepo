@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback, memo } from 'react'
+import { useMemo, useCallback, memo, ReactNode } from 'react'
 import { useRecoilValue } from 'recoil'
 import { Progress, List } from 'antd'
 import { todoListStatsState } from '../recoil'
@@ -29,7 +29,7 @@ function TodoListStats() {
     percentCompleted
   ])
 
-  const renderItem = useCallback(({ title, value }) => {
+  const renderItem = useCallback(({ title, value }: {title: string; value: ReactNode}) => {
     return <List.Item>{title}: {value}</List.Item>
   }, [])
 

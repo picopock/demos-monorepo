@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
+export interface IDiffDemoProps {
 
-export default function DiffDemo(props) {
+}
+
+export default function DiffDemo(props: IDiffDemoProps) {
   const [state, setstate] = useState([
     'A','B','C'
   ])
@@ -19,7 +22,11 @@ export default function DiffDemo(props) {
   </div>
 }
 
-class ChildA extends React.PureComponent {
+export interface IChildAProps {
+  index: string;
+}
+
+class ChildA extends React.PureComponent<IChildAProps> {
   componentDidMount() {
     console.log('A:componentDidMount: '+ this.props.index)
   }
