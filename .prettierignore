@@ -8,10 +8,6 @@
 # Prettier-specific overrides
 #-------------------------------------------------------------------------------------------------------------------
 
-# Rush files
-common/changes/
-common/scripts/
-common/config/
 CHANGELOG.*
 
 # Package manager files

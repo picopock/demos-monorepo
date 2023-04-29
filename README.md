@@ -1,12 +1,15 @@
-# monorepo-rush
-a monorepo solution based on rush
+# demos collection
+
+a monorepo solution based on pnpm for demos
 
 ## dev
 
 - 获取命令提示
-  `rush -h`
+
+  `pnpm -h`
+
 - 添加依赖到某个 package
+
   ```sh
-  cd ./<some-package>
-  rush add react
+  pnpm -F some-package add react
   ```
