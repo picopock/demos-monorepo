@@ -1,15 +1,11 @@
-import { useMemo, useCallback, memo, ReactNode } from 'react'
-import { useRecoilValue } from 'recoil'
-import { Progress, List } from 'antd'
-import { todoListStatsState } from '../recoil'
+import { List, Progress } from 'antd';
+import { type ReactNode, memo, useCallback, useMemo } from 'react';
+import { useRecoilValue } from 'recoil';
+import { todoListStatsState } from '../recoil';
 
 function TodoListStats() {
-  const {
-    totalNum,
-    totalCompletedNum,
-    totalUnCompletedNum,
-    percentCompleted
-  } = useRecoilValue(todoListStatsState)
+  const { totalNum, totalCompletedNum, totalUnCompletedNum, percentCompleted } =
+    useRecoilValue(todoListStatsState);
 
   const dataSource = useMemo(() => {
     const formattedPercentCompleted = Math.round(percentCompleted * 100);
@@ -19,21 +15,28 @@ function TodoListStats() {
       { title: 'Items not completed', value: totalUnCompletedNum },
       {
         title: 'Percent completed',
-        value: <Progress percent={formattedPercentCompleted} strokeColor={{ from: '#108ee9', to: '#87d068', }} />
+        value: (
+          <Progress
+            percent={formattedPercentCompleted}
+            strokeColor={{ from: '#108ee9', to: '#87d068' }}
+          />
+        ),
       },
-    ]
-  }, [
-    totalNum,
-    totalCompletedNum,
-    totalUnCompletedNum,
-    percentCompleted
-  ])
+    ];
+  }, [totalNum, totalCompletedNum, totalUnCompletedNum, percentCompleted]);
 
-  const renderItem = useCallback(({ title, value }: {title: string; value: ReactNode}) => {
-    return <List.Item>{title}: {value}</List.Item>
-  }, [])
+  const renderItem = useCallback(
+    ({ title, value }: { title: string; value: ReactNode }) => {
+      return (
+        <List.Item>
+          {title}: {value}
+        </List.Item>
+      );
+    },
+    [],
+  );
 
-  return <List bordered dataSource={dataSource} renderItem={renderItem} />
+  return <List bordered dataSource={dataSource} renderItem={renderItem} />;
 }
 
-export default memo(TodoListStats)
+export default memo(TodoListStats);

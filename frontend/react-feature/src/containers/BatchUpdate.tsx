@@ -1,8 +1,6 @@
 import { PureComponent } from 'react';
 
-export interface IBatchUpdateDemoProps {
-
-}
+export type IBatchUpdateDemoProps = {};
 
 export default class BatchUpdateDemo extends PureComponent<IBatchUpdateDemoProps> {
   renderCount: number;
@@ -28,11 +26,9 @@ export default class BatchUpdateDemo extends PureComponent<IBatchUpdateDemoProps
   fn3 = () => {
     // 模拟一个异步操作，真实业务里面可能是网络请求等
     setTimeout(() => {
-        this.setState({ a: Math.random() });
-        this.setState({ a: Math.random() });
-      },
-      0
-    );
+      this.setState({ a: Math.random() });
+      this.setState({ a: Math.random() });
+    }, 0);
   };
 
   render() {
@@ -46,7 +42,8 @@ export default class BatchUpdateDemo extends PureComponent<IBatchUpdateDemoProps
         <button onClick={this.fn2}>在一个异步的事件循环里 setState 两次</button>
         <br />
         <button onClick={this.fn3}>
-          在一个异步的事件循环里 setState 两次, 但是使用 ReactDOM.unstable_batchedUpdates 强制 batch
+          在一个异步的事件循环里 setState 两次, 但是使用
+          ReactDOM.unstable_batchedUpdates 强制 batch
         </button>
       </div>
     );

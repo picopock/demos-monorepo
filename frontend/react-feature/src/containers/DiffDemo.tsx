@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from 'react';
 
-export interface IDiffDemoProps {
-
-}
+export type IDiffDemoProps = {};
 
 export default function DiffDemo(props: IDiffDemoProps) {
-  const [state, setstate] = useState([
-    'A','B','C'
-  ])
+  const [state, setstate] = useState(['A', 'B', 'C']);
   useEffect(() => {
     setTimeout(() => {
-      setstate([
-        'C',  'A', 'B',   
-        ])
-    }, 6000)
-  }, [])
-  return <div className="test">
-    {state.map(item => {
-      return <ChildA index={item} key={item}></ChildA>
-    })}
-  </div>
+      setstate(['C', 'A', 'B']);
+    }, 6000);
+  }, []);
+  return (
+    <div className="test">
+      {state.map((item) => {
+        return <ChildA index={item} key={item}></ChildA>;
+      })}
+    </div>
+  );
 }
 
 export interface IChildAProps {
@@ -28,16 +24,16 @@ export interface IChildAProps {
 
 class ChildA extends React.PureComponent<IChildAProps> {
   componentDidMount() {
-    console.log('A:componentDidMount: '+ this.props.index)
+    console.log('A:componentDidMount: ' + this.props.index);
   }
   componentDidUpdate() {
-    console.log('A:componentDidUpdate'+ this.props.index)
+    console.log('A:componentDidUpdate' + this.props.index);
   }
   componentWillUnmount() {
-    console.log('A:componentWillUnmount'+ this.props.index)
+    console.log('A:componentWillUnmount' + this.props.index);
   }
   render() {
-    return <div>{this.props.index}</div>
+    return <div>{this.props.index}</div>;
   }
 }
 

@@ -1,8 +1,8 @@
-import { useCallback } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { Input } from "antd";
-import { textState, charCountState } from "./recoil";
-import TodoList from "./TodoList";
+import { Input } from 'antd';
+import { useCallback } from 'react';
+import { useRecoilState, useRecoilValue } from 'recoil';
+import TodoList from './TodoList';
+import { charCountState, textState } from './recoil';
 
 export default function CharacterCounter() {
   return (
@@ -20,7 +20,7 @@ function TextInput() {
     (event: any) => {
       setText(event.target.value);
     },
-    [setText]
+    [setText],
   );
 
   return (

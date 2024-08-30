@@ -1,12 +1,12 @@
-import { createBrowserRouter, RouterProvider, } from 'react-router-dom'
-import { RecoilRoot } from 'recoil'
-import Layout from '../../components/Layout';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 import ErrorPage from '../../components/ErrorPage';
-import ThemeContext from '../ThemeContext';
+import Layout from '../../components/Layout';
 import BatchUpdate from '../BatchUpdate';
 import DiffDemo from '../DiffDemo';
 import ReactEvent from '../ReactEvent';
 import RecoilDemo from '../RecoilDemo';
+import ThemeContext from '../ThemeContext';
 import './index.scss';
 
 const router = createBrowserRouter([
@@ -40,12 +40,14 @@ const router = createBrowserRouter([
         element: <RecoilDemo />,
         errorElement: <ErrorPage />,
       },
-    ]
+    ],
   },
 ]);
 
 export default function App() {
-  return <RecoilRoot>
-    <RouterProvider router={router} />
-  </RecoilRoot>
+  return (
+    <RecoilRoot>
+      <RouterProvider router={router} />
+    </RecoilRoot>
+  );
 }

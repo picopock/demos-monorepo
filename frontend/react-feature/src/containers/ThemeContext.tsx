@@ -1,4 +1,4 @@
-import {createContext, useState, useRef, useEffect} from 'react'
+import { createContext, useEffect, useRef, useState } from 'react';
 import Test, { ThemesBth } from './test';
 
 const themes = {
@@ -16,7 +16,9 @@ export const ThemeContext = createContext(themes.light);
 
 export default function ThemeContextDemo() {
   const [theme, updateTheme] = useState(themes.dark);
-  const [dataSource, updateDataSource] = useState<Record<string, unknown>[]>([]);
+  const [dataSource, updateDataSource] = useState<Record<string, unknown>[]>(
+    [],
+  );
   const [vip, updateVip] = useState<number[]>([]);
   const ref = useRef();
   const timeHD = useRef<ReturnType<typeof setInterval>>();
@@ -27,37 +29,39 @@ export default function ThemeContextDemo() {
       if (len > 50 && timeHD.current) clearInterval(timeHD.current);
 
       const clientId = Math.floor(Math.random() * 50);
-      updateDataSource(dataSource.concat({
-        name: `user ${len}`,
-        clientId: clientId,
-        address: `rom ${len}`,
-      }));
+      updateDataSource(
+        dataSource.concat({
+          name: `user ${len}`,
+          clientId: clientId,
+          address: `rom ${len}`,
+        }),
+      );
 
-      
       let _vip = vip;
       if (clientId > 25) {
         _vip = _vip.concat(clientId);
       }
-      updateVip(_vip)
-
+      updateVip(_vip);
     }, 3000);
     return () => {
       timeHD.current && clearInterval(timeHD.current);
-    }
-  }, [dataSource, vip])
+    };
+  }, [dataSource, vip]);
 
-  return <ThemeContext.Provider value={theme}>
-    <button
-          onClick={() => {
-            updateTheme(theme === themes.dark ? themes.light : themes.dark)
-          }}
-        >
-          change theme
-        </button>
-        <Test dataSource={dataSource} vip={vip}>
-          {() => {
-            return <ThemesBth ref={ref}></ThemesBth>;
-          }}
-        </Test>
-  </ThemeContext.Provider>
+  return (
+    <ThemeContext.Provider value={theme}>
+      <button
+        onClick={() => {
+          updateTheme(theme === themes.dark ? themes.light : themes.dark);
+        }}
+      >
+        change theme
+      </button>
+      <Test dataSource={dataSource} vip={vip}>
+        {() => {
+          return <ThemesBth ref={ref}></ThemesBth>;
+        }}
+      </Test>
+    </ThemeContext.Provider>
+  );
 }

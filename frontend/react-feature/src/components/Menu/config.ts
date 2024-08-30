@@ -5,22 +5,22 @@ export const navs = [
   },
   {
     path: '/themeContext',
-    title: 'Theme Context'
+    title: 'Theme Context',
   },
   {
     path: '/batchUpdate',
-    title: 'Batch Update'
+    title: 'Batch Update',
   },
   {
     path: '/diffDemo',
-    title: 'Diff Demo'
+    title: 'Diff Demo',
   },
   {
     path: '/reactEvent',
-    title: 'React Event'
+    title: 'React Event',
   },
   {
     path: '/recoil',
-    title: 'State Manager: Recoil'
+    title: 'State Manager: Recoil',
   },
-].map((nav, index) => ({ ...nav, key: index.toString() }))
+].map((nav, index) => ({ ...nav, key: index.toString() }));
