@@ -1,15 +1,14 @@
 import { Button, Checkbox, Input } from 'antd';
 import { type ChangeEventHandler, memo, useCallback } from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
 import {
   type TodoListItem,
-  filteredTodoListState,
-  todoListState,
-} from '../recoil';
+  useFilteredTodoList,
+  useTodoListStore
+} from '../zustand';
 import { removeItemAtIndex, replaceItemAtIndex } from '../util';
 
 function List() {
-  const todoList = useRecoilValue(filteredTodoListState);
+  const todoList = useFilteredTodoList();
   return todoList.map((todoItem) => {
     return <MemoListItem key={todoItem.id} item={todoItem} />;
   });
@@ -18,7 +17,8 @@ function List() {
 export default memo(List);
 
 function ListItem({ item }: { item: TodoListItem }) {
-  const [todoList, setTodoList] = useRecoilState(todoListState);
+  const todoList  = useTodoListStore<TodoListItem[]>(state => state.items)
+  const setTodoList = useTodoListStore(state => state.updateTodoList)
   const index = todoList.findIndex((listItem) => listItem === item);
 
   const editItemText: ChangeEventHandler<HTMLInputElement> = useCallback(

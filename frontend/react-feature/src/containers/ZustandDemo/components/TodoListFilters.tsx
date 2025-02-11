@@ -1,23 +1,16 @@
 import { Select } from 'antd';
-import { memo, useCallback } from 'react';
-import { useRecoilState } from 'recoil';
-import { FilterStatus, todoListFilterStatus } from '../recoil';
+import { memo } from 'react';
+import { useShallow } from 'zustand/react/shallow';
+import { FilterStatus,  useTodoListStore } from '../zustand';
 
 function TodoListFilters() {
-  const [filterStatus, setFilterStatus] = useRecoilState(todoListFilterStatus);
-
-  const updateFilterStatus = useCallback(
-    (value: string) => {
-      setFilterStatus(value);
-    },
-    [setFilterStatus],
-  );
+  const [filterStatus, updateFilterStatus] = useTodoListStore(useShallow(state => [state.filterStatus, state.updateFilterStatus]))
 
   return (
     <>
       Filter:
       <Select
-        style={{ width: '200px' }}
+        style={{ width: '200px', marginLeft: '12px', marginBottom: '24px' }}
         onChange={updateFilterStatus}
         value={filterStatus}
       >

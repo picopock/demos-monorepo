@@ -11,8 +11,8 @@ export default defineConfig({
     },
     transformImport: [
       {
-        libraryName: 'lodash',
-        customName: 'lodash/{{ member }}',
+        libraryName: 'lodash-es',
+        customName: 'lodash-es/{{ member }}',
       },
     ],
   },

@@ -1,12 +1,11 @@
 import { Button, Input } from 'antd';
 import { memo, useCallback, useState } from 'react';
-import { useSetRecoilState } from 'recoil';
-import { todoListState } from '../recoil';
+import { useTodoListStore } from '../zustand';
 import { getId } from '../util';
 
 function TodoItemCreator() {
   const [inputValue, setInputValue] = useState<string>('');
-  const setTodoList = useSetRecoilState(todoListState);
+  const setTodoList = useTodoListStore(state => state.updateTodoList)
 
   const onChange = useCallback(
     ({ target: { value } }: { target: { value: string } }) => {
@@ -26,7 +25,7 @@ function TodoItemCreator() {
             text: inputValue,
             isComplete: false,
           },
-        ] as any,
+        ],
     );
     setTimeout(() => {
       setInputValue('');

@@ -1,4 +1,4 @@
-import type { TodoListItem } from './recoil';
+import type { TodoListItem } from './zustand';
 
 let id = 0;
 export function getId() {

@@ -1,5 +1,5 @@
 import { createContext, useEffect, useRef, useState } from 'react';
-import Test, { ThemesBth } from './test';
+import Test, { ThemedButton } from './test';
 
 const themes = {
   light: {
@@ -20,8 +20,8 @@ export default function ThemeContextDemo() {
     [],
   );
   const [vip, updateVip] = useState<number[]>([]);
-  const ref = useRef();
-  const timeHD = useRef<ReturnType<typeof setInterval>>();
+  const ref = useRef<typeof ThemedButton | null>(null);
+  const timeHD = useRef<ReturnType<typeof setInterval>>(undefined);
 
   useEffect(() => {
     timeHD.current = setInterval(() => {
@@ -59,7 +59,7 @@ export default function ThemeContextDemo() {
       </button>
       <Test dataSource={dataSource} vip={vip}>
         {() => {
-          return <ThemesBth ref={ref}></ThemesBth>;
+          return <ThemedButton ref={ref} text="add"></ThemedButton>;
         }}
       </Test>
     </ThemeContext.Provider>

@@ -1,11 +1,10 @@
 import { List, Progress } from 'antd';
 import { type ReactNode, memo, useCallback, useMemo } from 'react';
-import { useRecoilValue } from 'recoil';
-import { todoListStatsState } from '../recoil';
+import { useTodoListStats } from '../zustand';
 
 function TodoListStats() {
   const { totalNum, totalCompletedNum, totalUnCompletedNum, percentCompleted } =
-    useRecoilValue(todoListStatsState);
+    useTodoListStats();
 
   const dataSource = useMemo(() => {
     const formattedPercentCompleted = Math.round(percentCompleted * 100);
@@ -28,8 +27,9 @@ function TodoListStats() {
   const renderItem = useCallback(
     ({ title, value }: { title: string; value: ReactNode }) => {
       return (
-        <List.Item>
-          {title}: {value}
+        <List.Item style={{display: 'flex'}}>
+          <span style={{flexGrow: 0, flexShrink: 0, marginRight: '24px'}}>{title}: </span>
+          {value}
         </List.Item>
       );
     },

@@ -1,8 +1,8 @@
 import { Input } from 'antd';
 import { useCallback } from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useShallow } from 'zustand/react/shallow'
 import TodoList from './TodoList';
-import { charCountState, textState } from './recoil';
+import { useCharCount, useTextStore } from './zustand';
 
 export default function CharacterCounter() {
   return (
@@ -15,9 +15,9 @@ export default function CharacterCounter() {
 }
 
 function TextInput() {
-  const [text, setText] = useRecoilState(textState);
+  const [text, setText] = useTextStore<[string, (val: string) => void]>(useShallow((state) => [state.text, state.updateText]));
   const onChange = useCallback(
-    (event: any) => {
+    (event: React.ChangeEvent<HTMLInputElement>) => {
       setText(event.target.value);
     },
     [setText],
@@ -32,7 +32,10 @@ function TextInput() {
   );
 }
 
+
+
 function CharacterCount() {
-  const count = useRecoilValue(charCountState);
+  // const count = useTextStore(state => state.getCount())
+  const count = useCharCount()
   return <>Character Count: {count}</>;
 }

@@ -1,11 +1,10 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { RecoilRoot } from 'recoil';
 import ErrorPage from '../../components/ErrorPage';
 import Layout from '../../components/Layout';
 import BatchUpdate from '../BatchUpdate';
 import DiffDemo from '../DiffDemo';
 import ReactEvent from '../ReactEvent';
-import RecoilDemo from '../RecoilDemo';
+import ZustandDemo from '../ZustandDemo';
 import ThemeContext from '../ThemeContext';
 import './index.scss';
 
@@ -36,8 +35,8 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
-        path: 'recoil',
-        element: <RecoilDemo />,
+        path: 'zustand',
+        element: <ZustandDemo />,
         errorElement: <ErrorPage />,
       },
     ],
@@ -46,8 +45,6 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <RecoilRoot>
-      <RouterProvider router={router} />
-    </RecoilRoot>
+    <RouterProvider router={router} />
   );
 }

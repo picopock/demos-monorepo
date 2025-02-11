@@ -1,7 +1,7 @@
 import { PureComponent, type RefObject, createRef } from 'react';
 
 export default class Demo extends PureComponent {
-  $parent: RefObject<HTMLDivElement>;
+  $parent: RefObject<HTMLDivElement | null>;
   constructor(props: any) {
     super(props);
     this.$parent = createRef();

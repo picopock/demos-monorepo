@@ -20,7 +20,7 @@ export const navs = [
     title: 'React Event',
   },
   {
-    path: '/recoil',
-    title: 'State Manager: Recoil',
+    path: '/zustand',
+    title: 'State Manager: zustand',
   },
 ].map((nav, index) => ({ ...nav, key: index.toString() }));

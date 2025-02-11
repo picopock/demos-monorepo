@@ -1,6 +1,5 @@
 import { Select, Table } from 'antd';
 import {
-  forwardRef,
   useCallback,
   useContext,
   useDebugValue,
@@ -206,8 +205,8 @@ const Test = (props: any) => {
 
 export default Test;
 
-export function ThemedButton(props: any, ref: any) {
-  const { text, onClick = () => {}, noRef } = props;
+export function ThemedButton(props: any) {
+  const { text, onClick = () => {}, ref, noRef } = props;
   const theme = useContext(ThemeContext);
   const _props = {} as any;
   if (!noRef) {
@@ -225,9 +224,9 @@ export function ThemedButton(props: any, ref: any) {
   );
 }
 
-export const FancyInput = forwardRef((props: any, ref: any) => {
+export const FancyInput = (props: any) => {
   const inputRef = useRef<any>(null);
-  useImperativeHandle(ref, () => ({
+  useImperativeHandle(props.ref, () => ({
     focus: () => {
       inputRef.current.focus();
     },
@@ -238,9 +237,7 @@ export const FancyInput = forwardRef((props: any, ref: any) => {
   }));
 
   return <input type="text" ref={inputRef} />;
-});
-
-export const ThemesBth = forwardRef(ThemedButton);
+};
 
 function useFriendStatus(friendID: number) {
   const [isOnline, setIsOnline] = useState<boolean>(false);
