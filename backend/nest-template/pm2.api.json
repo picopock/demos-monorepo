@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+      "name": "nest-api",
+      "script": "./main.js",
+      "env": {
+        "PORT": 3000
+      },
+      "node_args": ["--max-old-space-size=1024"],
+      "max_memory_restart": "4G",
+      "error_file": "./logs/server-err.log",
+      "out_file": "./logs/server-out.log",
+      "merge_logs": true,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
+      "log_type": "json",
+      "cwd": "./",
+      "instances": "2",
+      "exec_mode": "cluster",
+      "watch_options": {
+        "followSymlinks": false
+      }
+    }
+  ]
+}

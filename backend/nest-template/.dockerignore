@@ -1,0 +1,22 @@
+# 忽略所有 .md 文件，但不忽略 README.md
+*.md
+!README.md
+
+# 忽略所有 Node.js 依赖文件
+node_modules/
+
+# 忽略所有 Git 文件
+.git/
+.gitignore
+
+# 忽略所有 IDE 文件
+*.idea/
+*.vscode/
+
+# 忽略所有测试文件
+test/
+tests/
+
+# 忽略所有构建输出文件
+dist/
+build/

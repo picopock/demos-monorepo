@@ -25,26 +25,26 @@ export default class Demo extends PureComponent {
     }
   }
 
-  onParentDOMClick = (evt: Event) => {
+  onParentDOMClick = () => {
     console.log('captrue: parent dom event');
   };
 
-  onChildDOMClick = (evt: any) => {
+  onChildDOMClick = () => {
     console.log('bubble: child dom event');
   };
 
-  onParentClick = (evt: any) => {
+  onParentClick = () => {
     console.log('bubble: parent react event');
   };
 
-  onParentCaptureClick = (evt: any) => {
+  onParentCaptureClick = () => {
     console.log('capture: parent react event');
   };
 
-  onChildClick = (evt: any) => {
+  onChildClick = () => {
     console.log('bubble: child react event');
   };
-  onChildCaptureClick = (evt: any) => {
+  onChildCaptureClick = () => {
     console.log('capture: child react event');
   };
 

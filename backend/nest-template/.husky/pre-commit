@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# get root dir
+ROOT_DIR=$(dirname $(dirname "$0"))
+
+# node bin dir
+BIN_DIR=$ROOT_DIR/node_modules/.bin
+
+# export bin dir
+export PATH=$PATH:$BIN_DIR
+
+# code lint
+$BIN_DIR/lint-staged
+
+# gen change log
+$BIN_DIR/conventional-changelog -p angular -i CHANGES.txt -s
+git add CHANGES.txt

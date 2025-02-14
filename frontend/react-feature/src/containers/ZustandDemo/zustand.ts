@@ -11,7 +11,7 @@ export const useTextStore = create<{
   getCount() {
     return get().text.length;
   },
-  updateText: (val) => set((state) => ({ text: val })),
+  updateText: (val) => set((/* state */) => ({ text: val })),
 }))
 export const useCharCount = () => {
   const text = useTextStore(state => state.text)

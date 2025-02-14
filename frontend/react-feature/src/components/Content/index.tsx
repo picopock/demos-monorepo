@@ -7,7 +7,7 @@ const { Content } = Layout;
 
 export type ICustomContentProps = {};
 
-function CustomContent(props: ICustomContentProps) {
+function CustomContent(/* props: ICustomContentProps */) {
   const location = useLocation();
 
   const [breadcrumb, updateBreadcrumb] = useState(() => {

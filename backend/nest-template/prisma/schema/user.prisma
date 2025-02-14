@@ -1,0 +1,18 @@
+model User {
+  uid             String           @id @db.VarChar(255)
+  nickname        String?          @db.MediumText
+  pyInitial       String?          @db.MediumText
+  pyQuanPin       String?          @db.MediumText
+  headImgUrl      String?          @db.MediumText
+  headIconUrl     String?          @db.MediumText
+  version         Int?
+  dataCode        String?          @map("data_code") @db.VarChar(255)
+  account         String?          @db.VarChar(255)
+  empStatus       String?          @map("emp_status") @db.VarChar(255)
+  accountStatus   String?          @map("account_status") @db.VarChar(255)
+  createdAt       DateTime         @default(now()) @map("created_at") @db.DateTime(0)
+  updatedAt       DateTime         @default(now()) @map("updated_at") @db.DateTime(0)
+
+  @@index([dataCode], map: "user_data_code_index")
+  @@map("user")
+}

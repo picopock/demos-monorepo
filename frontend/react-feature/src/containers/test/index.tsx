@@ -83,7 +83,7 @@ const Test = (props: any) => {
           title: 'clientID',
           dataIndex: 'clientId',
           key: 'clientId',
-          render(clientId: string, row: any) {
+          render(clientId: string/* , row: any */) {
             return vip.includes(clientId) ? 'vip 用户' : '普通用户';
           },
         },
@@ -240,6 +240,7 @@ export const FancyInput = (props: any) => {
 };
 
 function useFriendStatus(friendID: number) {
+  console.log(friendID)
   const [isOnline, setIsOnline] = useState<boolean>(false);
   // 在开发者工具中的这个 Hook 旁边显示标签
   // e.g. "FriendStatus: Online"

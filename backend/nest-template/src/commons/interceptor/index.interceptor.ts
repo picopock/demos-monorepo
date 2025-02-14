@@ -1,0 +1,1 @@
+export { useGlobalInterceptors } from './useGlobalInterceptor';

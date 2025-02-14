@@ -1,0 +1,1 @@
+export { useGlobalPipes } from './useGlobalPipe';

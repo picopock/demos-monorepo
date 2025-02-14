@@ -13,3 +13,9 @@ a monorepo solution based on pnpm for demos
   ```sh
   pnpm -F some-package add react
   ```
+
+- 执行某个应用的 script
+
+  ```sh
+  pnpm -F @demo/nest-template run start:debug
+  ```

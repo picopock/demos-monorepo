@@ -1,0 +1,12 @@
+app:
+  id: nest-template
+
+throttle:
+  ttl: 1000
+  limit: 20
+
+token:
+  ttl: 1800000
+
+bullMQ:
+  codeWord: sdjkfhweorksdhfwierkjhwier=

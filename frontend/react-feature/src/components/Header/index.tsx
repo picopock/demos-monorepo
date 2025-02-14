@@ -1,6 +1,5 @@
 import { Layout } from 'antd';
 import Menu from '../Menu';
-import 'antd/lib/layout/style/index';
 
 const { Header } = Layout;
 

@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import { cloneDeep, partial } from "lodash-es";
+
+const test = partial((a,b) => {
+  return a + b;
+}, 1, 2)
 
 export type IDiffDemoProps = {};
 
-export default function DiffDemo(props: IDiffDemoProps) {
-  const [state, setstate] = useState(['A', 'B', 'C']);
+export default function DiffDemo(/* props: IDiffDemoProps */) {
+  const [state, setstate] = useState(cloneDeep(['A', 'B', 'C']));
   useEffect(() => {
     setTimeout(() => {
       setstate(['C', 'A', 'B']);
+      console.log(test())
     }, 6000);
   }, []);
   return (
