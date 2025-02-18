@@ -13,6 +13,7 @@ export class PrismaService
   ) {
     super({
       log: [
+        { emit: 'stdout', level: 'query' },
         { emit: 'stdout', level: 'info' },
         { emit: 'stdout', level: 'warn' },
         { emit: 'stdout', level: 'error' },
@@ -22,11 +23,6 @@ export class PrismaService
   }
 
   async onModuleInit() {
-    this.$on('query', (event: Prisma.QueryEvent) => {
-      this.logger.info(
-        `PrismaClient: cost ${event.duration}ms \nQuery:${event.query} \nparams: ${event.params} `,
-      );
-    });
     await this.$connect();
   }
 

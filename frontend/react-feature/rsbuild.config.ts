@@ -20,6 +20,7 @@ export default defineConfig({
       //   customName: 'lodash/{{ member }}',
       // },
     ],
+
   },
   output: {
     // target: "web",
